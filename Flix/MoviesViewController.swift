@@ -75,6 +75,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         /*.dequeueReusableCell - at any point of time, you may have 100+ rows of movies. So that many cells will take a lot of memory
         DQ does is recycles cells*/
+        //created a cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
         
         //accessing the movies
@@ -103,5 +104,24 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.posterView.af.setImage(withURL: posterUrl) //cell.posterView.af_setImage ->old syntax
         return cell
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //find the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        //pass the selected movie to the details view controller
+        let detailsViewController =  segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        tableView.deselectRow(at: indexPath, animated: true) // this is to remove the grey background selcetor out
+        
+        
+    }
+    
+    
+    
+    
+   
 }
  

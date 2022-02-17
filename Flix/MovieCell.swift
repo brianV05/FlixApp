@@ -10,7 +10,6 @@ import UIKit
 class MovieCell: UITableViewCell {
     
     //add all outlet for the Custom View Table Cell
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     @IBOutlet weak var posterView: UIImageView!
