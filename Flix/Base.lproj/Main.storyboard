@@ -13,10 +13,14 @@
         <scene sceneID="qyh-aw-bao">
             <objects>
                 <tabBarController id="jv2-f5-H2h" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WWr-4a-5bS">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="WWr-4a-5bS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemPurpleColor"/>
+                        <tabBarAppearance key="standardAppearance" stackedItemPositioning="automatic">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="1Kp-OQ-VpZ" kind="relationship" relationship="viewControllers" id="xNr-Hd-jwM"/>
@@ -94,7 +98,6 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TKi-0M-D8J"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TKi-0M-D8J" firstAttribute="trailing" secondItem="itY-UL-l7c" secondAttribute="trailing" id="4nU-29-4Yu"/>
                             <constraint firstItem="itY-UL-l7c" firstAttribute="leading" secondItem="TKi-0M-D8J" secondAttribute="leading" id="BpK-Tc-sID"/>
@@ -131,14 +134,14 @@
                                 <rect key="frame" x="162" y="355" width="232" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" red="0.96040814330000002" green="0.96040814330000002" blue="0.96040814330000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sc-CS-1rM">
                                 <rect key="frame" x="11" y="451" width="383" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.96040814330000002" green="0.96040814330000002" blue="0.96040814330000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -155,17 +158,69 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="he0-Fe-HXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="893"/>
+            <point key="canvasLocation" x="-178.2608695652174" y="892.63392857142856"/>
+        </scene>
+        <!--Super Hero Details View Controller-->
+        <scene sceneID="lFC-HF-xWG">
+            <objects>
+                <viewController id="B5p-Nf-9Ya" customClass="SuperHeroDetailsViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eqz-gd-nwr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-Qq-oTl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svI-O8-5D1">
+                                <rect key="frame" x="11" y="223" width="143" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUO-xv-YIU">
+                                <rect key="frame" x="162" y="358" width="232" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lR8-Ig-3YP">
+                                <rect key="frame" x="11" y="451" width="383" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ecG-MO-XDJ"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eSF-Pd-SrD"/>
+                    <connections>
+                        <outlet property="Sbackdrop" destination="UqJ-Qq-oTl" id="ynp-DX-Ssx"/>
+                        <outlet property="Sposter" destination="svI-O8-5D1" id="pl2-LM-a5L"/>
+                        <outlet property="SsynopsisLabel" destination="lR8-Ig-3YP" id="BAP-Zp-DqF"/>
+                        <outlet property="StitleLabel" destination="tUO-xv-YIU" id="yLx-Mv-KWx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srS-h0-6UF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257.9710144927537" y="892.63392857142856"/>
         </scene>
         <!--Now Playing -->
         <scene sceneID="pU0-Zy-Snf">
             <objects>
-                <navigationController id="1Kp-OQ-VpZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Now Playing " image="now_playing_tabbar_item" id="75l-MC-pPA"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="1Kp-OQ-VpZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Now Playing " image="now_playing_tabbar_item" id="75l-MC-pPA">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" tag="1" contentMode="scaleToFill" id="bTu-hh-gWH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j89-0R-1Xo">
@@ -214,13 +269,14 @@
                                         <size key="customSize" width="200" height="213"/>
                                         <connections>
                                             <outlet property="posterView" destination="SAL-BH-Rg5" id="dHa-YQ-AWe"/>
+                                            <segue destination="B5p-Nf-9Ya" kind="show" id="3n3-17-yHN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QJG-Tw-7Ak"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Superhero" id="B8O-Dd-UMe"/>
                     <connections>
@@ -234,12 +290,19 @@
         <!--Superhero-->
         <scene sceneID="BQm-Ll-qhs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NkC-OC-Qi1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Superhero" image="superhero_tabbar_item" id="9iF-GG-01e"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="NkC-OC-Qi1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Superhero" image="superhero_tabbar_item" id="9iF-GG-01e">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                        <inset key="largeContentSizeImageInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="p8w-2a-MeR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -256,6 +319,9 @@
         <image name="superhero_tabbar_item" width="21" height="23"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

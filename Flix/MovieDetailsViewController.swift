@@ -17,11 +17,9 @@ class MovieDetailsViewController: UIViewController {
     
     // added property
     var movie: [String:Any]!
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         //getting title, synopsis, poster, backdrop from the API
         titleLabel.text = movie["title"] as? String
         titleLabel.sizeToFit() //text wrapping(text was being clipped), it will grow the label to satify the text

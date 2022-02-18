@@ -51,9 +51,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                  //this will print datadicationary in the terminal
                  print(dataDictionary)
                  
-                    // TODO: Get the array of movies
-                    // TODO: Store the movies in a property to use elsewhere
-                    // TODO: Reload your table view data
              }
         }
         task.resume()
@@ -104,24 +101,21 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.posterView.af.setImage(withURL: posterUrl) //cell.posterView.af_setImage ->old syntax
         return cell
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //find the selected movie
+        //"this is the cell that was tapped on"
         let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let movie = movies[indexPath.row]
+        //"hey tableView what is the indexPath for that cell
+        let indexPath = tableView.indexPath(for: cell)!   //determining the index path of the cell
+        let movie = movies[indexPath.row] // access in the array
         
         //pass the selected movie to the details view controller
         let detailsViewController =  segue.destination as! MovieDetailsViewController
         detailsViewController.movie = movie
         
         tableView.deselectRow(at: indexPath, animated: true) // this is to remove the grey background selcetor out
-        
-        
     }
     
-    
-    
-    
-   
 }
  

@@ -28,9 +28,9 @@ class MovieGridViewController: UIViewController,UICollectionViewDataSource, UICo
         //with this you can start to configure layout
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         //minimumLineSpacing = controls the space in between the rows
-        layout.minimumLineSpacing = 40
+        layout.minimumLineSpacing = 10
         //innner aisle spacing
-        layout.minimumInteritemSpacing = 0
+        layout.minimumInteritemSpacing = 10
         
         //this will access the width of the phone
         let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3           // this will output 3 poster
@@ -69,8 +69,8 @@ class MovieGridViewController: UIViewController,UICollectionViewDataSource, UICo
     func collectionView(_ _collectioView:UICollectionView, numberOfItemsInSection section:Int) -> Int {
         //enter amount of items
         return movies.count
-        
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //for withReuseIdentifier, you will place the name of teh swift file you created to put the outlets for the gridView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath) as! MovieGridCell
@@ -82,13 +82,24 @@ class MovieGridViewController: UIViewController,UICollectionViewDataSource, UICo
         let posterPath = movie["poster_path"] as! String
         let posterUrl = URL(string: baseUrl + posterPath)!
         
-        
         cell.posterView.af.setImage(withURL: posterUrl)
         
-        
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //find the selected movie
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let movie = movies[indexPath.item]
+        
+        //pass the selected movie to the SuperHero Detailed View Controller
+        let superheroDetailViewController = segue.destination as! SuperHeroDetailsViewController
+        superheroDetailViewController.movie = movie
+        
     }
     
 
    
 }
+ 
