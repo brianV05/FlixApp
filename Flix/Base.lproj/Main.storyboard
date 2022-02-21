@@ -206,7 +206,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="dAm-Ri-t49" kind="presentation" id="WOu-Dk-r4a"/>
+                                    <segue destination="dAm-Ri-t49" kind="presentation" modalPresentationStyle="fullScreen" id="WOu-Dk-r4a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -230,7 +230,7 @@
             <objects>
                 <viewController id="dAm-Ri-t49" customClass="TrailerViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SRm-5y-WLT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIt-gK-5WL">

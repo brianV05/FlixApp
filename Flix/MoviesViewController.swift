@@ -49,12 +49,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                  
                  //this will print datadicationary in the terminal
                  print(dataDictionary)
-                 
              }
         }
         task.resume()
     }
-    
     
     //from step 2
     //asking for the number of rows
@@ -67,7 +65,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //create a new cell
         /*let cell = UITableViewCell()*/
-        
         
         /*.dequeueReusableCell - at any point of time, you may have 100+ rows of movies. So that many cells will take a lot of memory
         DQ does is recycles cells*/

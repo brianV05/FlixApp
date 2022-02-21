@@ -43,8 +43,6 @@ class SuperHeroDetailsViewController: UIViewController {
         let SbackdropUrl = URL(string: "https://image.tmdb.org/t/p/w780" + SbackdropPath)!
         Sbackdrop.af.setImage(withURL: SbackdropUrl)
     
-        
-        
         //----------API for the trailer movie------------------------
         //this is saying "hey, look through the movie dict. for "id" as an integer and pass it to movieId
         let movieId = String(movie["id"] as! Int)
@@ -70,7 +68,6 @@ class SuperHeroDetailsViewController: UIViewController {
         //-----------------------------------------------------------
          
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //getting the key through the scope of ID of each movie

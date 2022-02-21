@@ -21,7 +21,6 @@ class TrailerViewController: UIViewController, WKUIDelegate {
         
         WebView.uiDelegate = self
         view = WebView
-        
     }
     
     override func viewDidLoad() {
