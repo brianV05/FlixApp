@@ -17,7 +17,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="WWr-4a-5bS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="systemPurpleColor"/>
                         <tabBarAppearance key="standardAppearance" stackedItemPositioning="automatic">
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -206,7 +206,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="dAm-Ri-t49" kind="presentation" modalPresentationStyle="fullScreen" id="s1q-RT-whE"/>
+                                    <segue destination="dAm-Ri-t49" kind="presentation" id="WOu-Dk-r4a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -230,11 +230,11 @@
             <objects>
                 <viewController id="dAm-Ri-t49" customClass="TrailerViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SRm-5y-WLT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIt-gK-5WL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="-39" width="414" height="935"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -248,6 +248,8 @@
                     </view>
                     <connections>
                         <outlet property="TrailerView" destination="ZIt-gK-5WL" id="lhR-nK-1tI"/>
+                        <outlet property="WebView" destination="ZIt-gK-5WL" id="M87-3Q-fm5"/>
+                        <outlet property="webView" destination="ZIt-gK-5WL" id="qIA-dn-PPn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mS6-hJ-Gdi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -266,8 +268,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemPurpleColor"/>
                         <navigationBarAppearance key="standardAppearance">
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -290,9 +293,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xlh-Wq-uWz">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xlh-Wq-uWz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qte-FG-hjh">
                                     <size key="itemSize" width="200" height="213"/>
@@ -308,11 +310,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="213"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAL-BH-Rg5">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SAL-BH-Rg5">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="213"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="213" id="LAY-Kd-Zf6"/>
+                                                        <constraint firstAttribute="width" constant="200" id="xAc-L5-wyr"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="SAL-BH-Rg5" secondAttribute="trailing" id="Cjz-b8-2nr"/>
+                                                <constraint firstItem="SAL-BH-Rg5" firstAttribute="leading" secondItem="xMC-5J-9ah" secondAttribute="leading" id="aSg-RU-fpm"/>
+                                                <constraint firstAttribute="bottom" secondItem="SAL-BH-Rg5" secondAttribute="bottom" id="hsn-cj-OdX"/>
+                                                <constraint firstItem="SAL-BH-Rg5" firstAttribute="top" secondItem="xMC-5J-9ah" secondAttribute="top" id="m0g-tH-uqk"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="200" height="213"/>
                                         <connections>
@@ -324,7 +335,13 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QJG-Tw-7Ak"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Xlh-Wq-uWz" secondAttribute="bottom" id="625-N1-f24"/>
+                            <constraint firstItem="Xlh-Wq-uWz" firstAttribute="trailing" secondItem="QJG-Tw-7Ak" secondAttribute="trailing" id="9yJ-RL-pbw"/>
+                            <constraint firstItem="Xlh-Wq-uWz" firstAttribute="leading" secondItem="QJG-Tw-7Ak" secondAttribute="leading" id="Eg6-g0-AFp"/>
+                            <constraint firstItem="Xlh-Wq-uWz" firstAttribute="top" secondItem="TnC-0x-pQf" secondAttribute="top" id="R5a-6g-hcS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Superhero" id="B8O-Dd-UMe"/>
                     <connections>
@@ -348,8 +365,10 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemPurpleColor"/>
                         <navigationBarAppearance key="standardAppearance">
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>

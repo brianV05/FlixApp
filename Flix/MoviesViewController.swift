@@ -13,7 +13,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     //stores the list of movies from the API's result section
     //var movie is an array of dictionaries
     var movies = [[String:Any]]() // (), means the creation of something
