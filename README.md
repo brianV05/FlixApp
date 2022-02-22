@@ -16,7 +16,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthrough GIF
 
-<img src="http://g.recordit.co/J3sVpyUjch.gif" width=250><br>
+<img src="http://g.recordit.co/tno7xEOEvb.gif" width=250><br>
 
 ### Notes
 For part 2, we have a gridView that displays superhero movies. This is also done with API. When tap on movie, it will segue to a detailed view controller. Along with tapping on the poster image to watch the trailer, using WebView. 
@@ -36,7 +36,7 @@ For part 2, we have a gridView that displays superhero movies. This is also done
 ### App Walkthrough GIF
 Recorded through real device 
 
-<img src="http://g.recordit.co/wxlPixe1w0.gif" width=250><br>
+<img src="http://g.recordit.co/vVGhtOxZ9c.gif" width=250><br>
 
 ### Notes
 For part 1, we have a tableView that shows now playing movies. This is all done by API. For each cell clicked
