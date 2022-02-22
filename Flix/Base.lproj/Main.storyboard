@@ -264,9 +264,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIt-gK-5WL">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIt-gK-5WL">
                                 <rect key="frame" x="0.0" y="-39" width="414" height="935"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -276,6 +275,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N5n-lR-Rya"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZIt-gK-5WL" firstAttribute="top" secondItem="SRm-5y-WLT" secondAttribute="top" constant="-39" id="0N4-c1-nuh"/>
+                            <constraint firstItem="ZIt-gK-5WL" firstAttribute="leading" secondItem="N5n-lR-Rya" secondAttribute="leading" id="JxE-Ps-j1d"/>
+                            <constraint firstItem="ZIt-gK-5WL" firstAttribute="trailing" secondItem="N5n-lR-Rya" secondAttribute="trailing" id="MvE-hc-9Ue"/>
+                            <constraint firstAttribute="bottom" secondItem="ZIt-gK-5WL" secondAttribute="bottom" constant="-54" id="zDr-xC-3dC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="TrailerView" destination="ZIt-gK-5WL" id="lhR-nK-1tI"/>
